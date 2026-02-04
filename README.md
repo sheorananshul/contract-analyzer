@@ -32,7 +32,5 @@ The result is a **trustworthy, explainable compliance report**, not a black-box 
 - 🛡️ **Deterministic, Evidence-Based Confidence Scoring**
 - 🧩 **Fully Modular Architecture**
 
----
 
-## Architecture (High Level)
 
