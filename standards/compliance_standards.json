@@ -1,0 +1,233 @@
+{
+  "Password Management": {
+    "question": "Based on the contract language and exhibits, what is the compliance state for Password Management?",
+    "description": "Contract must require a documented password standard covering password length/strength, prohibition of default and known-compromised passwords, secure storage (no plaintext; salted hashing if stored), brute-force protections (lockout/rate limiting), prohibition on password sharing, vaulting of privileged credentials/recovery codes, and time-based rotation for break-glass credentials.",
+    "controls": [
+      "password length/strength",
+      "prohibition of default passwords",
+      "prohibition of known-compromised passwords",
+      "secure storage (no plaintext; salted hashing if stored)",
+      "brute-force protections (lockout/rate limiting)",
+      "prohibition on password sharing",
+      "vaulting of privileged credentials/recovery codes",
+      "time-based rotation for break-glass credentials"
+    ],
+    "search_hints": [
+      "password policy",
+      "credential policy",
+      "authentication policy",
+      "account lockout",
+      "rate limiting",
+      "throttling",
+      "password hashing",
+      "salted hash",
+      "privileged access",
+      "PAM",
+      "credential vault",
+      "secret manager",
+      "break-glass",
+      "emergency access"
+    ],
+    "must_controls": [
+      "password length/strength",
+      "prohibition of default passwords",
+      "secure storage (no plaintext; salted hashing if stored)",
+      "brute-force protections (lockout/rate limiting)",
+      "vaulting of privileged credentials/recovery codes"
+    ],
+    "control_keywords": {
+      "password length/strength": ["minimum length", "complexity", "NIST", "password strength"],
+      "prohibition of default passwords": ["no default password", "factory default", "vendor default"],
+      "prohibition of known-compromised passwords": ["breached passwords", "known compromised", "password blacklist", "deny list"],
+      "secure storage (no plaintext; salted hashing if stored)": ["no plaintext", "salted hash", "bcrypt", "scrypt", "argon2"],
+      "brute-force protections (lockout/rate limiting)": ["account lockout", "rate limiting", "throttling", "failed login", "brute force"],
+      "prohibition on password sharing": ["no password sharing", "no shared accounts", "unique user accounts"],
+      "vaulting of privileged credentials/recovery codes": ["PAM", "credential vault", "secret manager", "vaulted credentials"],
+      "time-based rotation for break-glass credentials": ["break-glass", "emergency access", "credential rotation", "rotate passwords"]
+    }
+  },
+
+  "IT Asset Management": {
+    "question": "Based on the contract language and exhibits, what is the compliance state for IT Asset Management?",
+    "description": "Contract must require an in-scope asset inventory (including cloud accounts/subscriptions, workloads, databases, security tooling), define minimum inventory fields, require at least quarterly reconciliation/review, and require secure configuration baselines with drift remediation and prohibition of insecure defaults.",
+    "controls": [
+      "asset inventory includes cloud accounts/subscriptions",
+      "inventory includes workloads and databases",
+      "inventory includes security tooling",
+      "minimum inventory fields defined",
+      "quarterly reconciliation/review",
+      "secure configuration baselines",
+      "drift remediation",
+      "prohibition of insecure defaults"
+    ],
+    "search_hints": [
+      "asset inventory",
+      "asset register",
+      "CMDB",
+      "configuration management",
+      "cloud accounts",
+      "subscriptions",
+      "tenants",
+      "workloads",
+      "instances",
+      "databases",
+      "baseline",
+      "hardening",
+      "CIS benchmark",
+      "configuration drift",
+      "drift remediation",
+      "secure by default"
+    ],
+    "must_controls": [
+      "asset inventory includes cloud accounts/subscriptions",
+      "inventory includes workloads and databases",
+      "minimum inventory fields defined",
+      "quarterly reconciliation/review",
+      "secure configuration baselines",
+      "drift remediation",
+      "prohibition of insecure defaults"
+    ],
+    "control_keywords": {
+      "asset inventory includes cloud accounts/subscriptions": ["cloud account", "subscription", "tenant", "AWS account", "Azure subscription", "GCP project"],
+      "inventory includes workloads and databases": ["workload", "instance", "container", "cluster", "database", "DB"],
+      "inventory includes security tooling": ["SIEM", "EDR", "scanner", "monitoring tools"],
+      "minimum inventory fields defined": ["required fields", "asset attributes", "owner", "classification", "data classification"],
+      "quarterly reconciliation/review": ["quarterly", "periodic review", "reconciliation", "audit inventory"],
+      "secure configuration baselines": ["configuration baseline", "hardening", "secure baseline", "CIS"],
+      "drift remediation": ["configuration drift", "detect deviations", "remediate deviations", "continuous compliance"],
+      "prohibition of insecure defaults": ["secure by default", "no insecure defaults", "disable insecure settings"]
+    }
+  },
+
+  "Security Training & Background Checks": {
+    "question": "Based on the contract language and exhibits, what is the compliance state for Security Training and Background Checks?",
+    "description": "Contract must require security awareness training on hire and at least annually, and background screening for personnel with access to Company Data to the extent permitted by law, including maintaining a screening policy and attestation/evidence.",
+    "controls": [
+      "security awareness training on hire",
+      "security awareness training at least annually",
+      "background screening for personnel with access to Company Data (as permitted by law)",
+      "maintain screening policy",
+      "attestation/evidence maintained"
+    ],
+    "search_hints": [
+      "security awareness",
+      "information security training",
+      "annual training",
+      "onboarding",
+      "new hire training",
+      "background screening",
+      "background check",
+      "personnel screening",
+      "vetting",
+      "as permitted by law",
+      "attestation",
+      "evidence",
+      "records"
+    ],
+    "must_controls": [
+      "security awareness training on hire",
+      "security awareness training at least annually",
+      "background screening for personnel with access to Company Data (as permitted by law)"
+    ],
+    "control_keywords": {
+      "security awareness training on hire": ["on hire", "onboarding", "new hire", "security training"],
+      "security awareness training at least annually": ["annual", "annually", "yearly", "recurring training"],
+      "background screening for personnel with access to Company Data (as permitted by law)": ["background check", "screening", "criminal record check", "verification", "permitted by law"],
+      "maintain screening policy": ["screening policy", "HR policy", "vetting policy"],
+      "attestation/evidence maintained": ["attestation", "evidence", "documentation", "records", "audit evidence"]
+    }
+  },
+
+  "Data in Transit Encryption": {
+    "question": "Based on the contract language and exhibits, what is the compliance state for Data in Transit Encryption?",
+    "description": "Contract must require encryption of Company Data in transit using TLS 1.2+ (preferably TLS 1.3 where feasible) for Company-to-Service traffic, administrative access pathways, and applicable Service-to-Subprocessor transfers, with certificate management and avoidance of insecure cipher suites.",
+    "controls": [
+      "TLS 1.2+ for Company-to-Service traffic",
+      "TLS 1.3 preferred where feasible",
+      "encryption for administrative access pathways",
+      "encryption for Service-to-Subprocessor transfers (where applicable)",
+      "certificate management",
+      "avoid insecure cipher suites"
+    ],
+    "search_hints": [
+      "encryption in transit",
+      "TLS 1.2",
+      "TLS 1.3",
+      "HTTPS",
+      "secure channel",
+      "admin access encryption",
+      "management interface",
+      "subprocessor transfer",
+      "third party transfer",
+      "certificate management",
+      "certificate rotation",
+      "PKI",
+      "cipher suites",
+      "weak ciphers"
+    ],
+    "must_controls": [
+      "TLS 1.2+ for Company-to-Service traffic",
+      "encryption for administrative access pathways",
+      "encryption for Service-to-Subprocessor transfers (where applicable)"
+    ],
+    "control_keywords": {
+      "TLS 1.2+ for Company-to-Service traffic": ["TLS 1.2", "HTTPS", "TLS", "encryption in transit"],
+      "TLS 1.3 preferred where feasible": ["TLS 1.3", "modern TLS", "latest TLS"],
+      "encryption for administrative access pathways": ["administrative access", "management interface", "secure channel", "admin access"],
+      "encryption for Service-to-Subprocessor transfers (where applicable)": ["subprocessor", "third party", "downstream transfer", "data transfer"],
+      "certificate management": ["certificate rotation", "trusted CA", "PKI", "certificate lifecycle"],
+      "avoid insecure cipher suites": ["weak cipher", "insecure cipher", "disable weak ciphers", "cipher suites"]
+    }
+  },
+
+  "Network Authentication & Authorization Protocols": {
+    "question": "Based on the contract language and exhibits, what is the compliance state for Network Authentication and Authorization Protocols?",
+    "description": "Contract must specify authentication mechanisms (e.g., SAML SSO for users), API access using OAuth/token-based authentication, require MFA for privileged/production access, require secure admin pathways (bastion/secure gateway) with session logging, and require RBAC authorization.",
+    "controls": [
+      "authentication mechanisms specified (e.g., SAML SSO for users)",
+      "OAuth/token-based auth for APIs",
+      "MFA required for privileged/production access",
+      "secure admin pathways (bastion/secure gateway)",
+      "session logging for admin access",
+      "RBAC authorization required"
+    ],
+    "search_hints": [
+      "SAML",
+      "SSO",
+      "single sign-on",
+      "IdP",
+      "OAuth 2.0",
+      "OIDC",
+      "JWT",
+      "bearer token",
+      "signed token",
+      "MFA",
+      "2FA",
+      "privileged access",
+      "production access",
+      "bastion",
+      "jump host",
+      "secure gateway",
+      "session logging",
+      "audit logging",
+      "RBAC",
+      "least privilege"
+    ],
+    "must_controls": [
+      "authentication mechanisms specified (e.g., SAML SSO for users)",
+      "OAuth/token-based auth for APIs",
+      "MFA required for privileged/production access",
+      "secure admin pathways (bastion/secure gateway)",
+      "session logging for admin access",
+      "RBAC authorization required"
+    ],
+    "control_keywords": {
+      "authentication mechanisms specified (e.g., SAML SSO for users)": ["SAML", "SSO", "identity provider", "IdP", "single sign-on"],
+      "OAuth/token-based auth for APIs": ["OAuth 2.0", "OIDC", "JWT", "bearer token", "signed token"],
+      "MFA required for privileged/production access": ["MFA", "multi-factor", "2FA", "privileged access", "production"],
+      "secure admin pathways (bastion/secure gateway)": ["bastion", "jump host", "secure gateway", "privileged pathway"],
+      "session logging for admin access": ["session logging", "audit logs", "privileged session monitoring", "record sessions"],
+      "RBAC authorization required": ["RBAC", "role-based access control", "least privilege", "role permissions"]
+    }
+  }
+}
